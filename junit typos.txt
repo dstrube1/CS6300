@@ -1,0 +1,45 @@
+Under "Configure Gradle to use JUnit 5",
+there is a missing closing curly bracket ('}')
+
+Under "A test class for the above class could look like the following.",
+#5 should go to "if not the message at the end of the method is shown"
+#6 should go to "@RepeatedTest defines that this test method will be executed multiple times, in this example 5 times"
+
+Under 2.1, there is mention of "org.junit.jupiter.api.Assertions.expectThrows()". 
+This should be "org.junit.jupiter.api.Assertions.assertThrows()".
+
+Under 2.3, misplaced comma:
+"If you want to ensure that a test fails, if it isn’t done in a certain amount of time you can use the assertTimeout() method."
+should be:
+"If you want to ensure that a test fails if it isn’t done in a certain amount of time, you can use the assertTimeout() method."
+
+Under 2.4: 
+"This is useful when the underlying code has been changed and the test case has not yet been adapted of if the test demonstrates an incorrect behavior in the code which has not yet been fixed."
+"of" should be "or"
+
+Under 3.1: A lot of things wrong with this sentence:
+"This means, that you can’t use thesm to reset the test object, if you change it’s state in the lambda expression for a dynamic test."
+
+Under 3.2:
+"We give it the name of the function(s) we want it to call to get it’s test data."
+"it's" should be "its"
+
+Under 4.2:
+"JUnit runs test methods is a deterministic but unpreditable order (MethodSorters.DEFAULT)."
+"is" should be "in"
+
+Under 4.3:
+"It will also remove the temporary files are each test."
+"are" should be "after"(?)
+
+Under 5.2:
+"Configure to use Java 11 or hight, as this is required by JUnit5"
+"hight" should be "higher"
+
+Under 6.2:
+there is a missing closing curly bracket ('}')
+
+Under 7.4:
+"test" should be "tests"
+
+leftoff=9

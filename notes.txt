@@ -1,0 +1,284 @@
+	P1L1 Introduction And Overview:
+RUP: Rational Unified Process
+USP: Unified Software Process
+
+	P1L2 Life Cycle Models:
+A- Requirement engineering (cost of late correction)
+B- Design
+C- Implementation
+	structuring for validation = designing for testability
+D- Verification & Validation
+E- Maintenance
+Software process model must:
+	- determine the order
+	- establish transition criteria
+Evolutionary prototyping: can easily become an excuse to do code-and-fix approach
+Lifecycle Documents - we'll use Lite, not IEEE
+Classic mistake categories: people, process, product, technology
+
+	P1L3 Integrated Development Environment:
+Views
+Source Code Editor
+SCM: version control systems => Software Configuration Management
+Builders
+Runtime
+Testing
+Debugger
+
+	P1L4 Version Control:
+aka revision / source control system
+enforce discipline
+archive versions
+maintain historical info (who is the author, when was it edited)
+enable collaboration
+recover from accidental deletions or edits
+conserve disk space
+essential actions: add (new file), commit, update (pull)
+don'ts: 
+	derived / executable files; 
+	large files; 
+	save local copy of file or tree of files
+two main types: centralized; decentralized
+decentralized can make local snapshots and control who sees what
+workflow elements:
+	workspace (working dir)
+	index (stage)
+	local repo (head)
+	remote repo
+add: from workspace to index (-u ?)
+commit: from index to local repo
+(commit -a: add + commit)
+push: from local repo to remote repo
+fetch: from remote repo to local repo
+merge: from local repo to workspace
+pull: from remote repo to workspace
+diff HEAD: get difference between workspace and local repo
+diff: get difference between workspace and index
+	useful basic commands:
+git help init
+git config --global user.name "David Strube"
+git config --global user.email "a@b.com"
+#initialize a directory as a new git project:
+git init 
+git status
+#create empty file:
+touch newFile 
+git add newFile
+#open editor for commit summary; ":wq" will save & execute the commit:
+git commit 
+git diff newFile 
+git commit -a -m "Commit summary goes here; -a bypasses the add command"
+#get commit history:
+git log 
+#show changes introduced by commit based on commit id, first [4 chars] is good enough:
+git show [4 chars] 
+#todo: get full syntax; example at about 6 min in to 14:20 video:
+git clone 
+#get details of remote repo:
+git remote -v 
+git push
+git pull
+#get name of current branch and show other available branches:
+git branch 
+#create new branch named newBranch:
+git branch newBranch 
+#set branch newBranch as the working branch:
+git checkout newBranch 
+#create new branch and set it as the working branch:
+git checkout -b newBranch 
+#merge branchName into working branch
+git merge branchName 
+#delete branchName:
+git branch -d newBranch 
+	if there is a merge conflict in file newFile:
+1- [edit the file & save changes]
+2- git add newFile
+3- git commit -m "merged newFile"
+for eclipse: git plugin: eclipse.github.com
+[^hopefully not required for this course^]
+#view Git commit graph from terminal:
+git log --graph --oneline --all
+
+	P1L5: Requirements Gathering:
+rarely straightforward
+usually must be obtained thru conversation
+ex: find average length of sentences in a paper.
+questions:
+what is the expected for of input: string, array of strings, file
+how to deal with null input
+how to deal with empty input
+is there a max size
+how many total inputs should i expect
+how often will this be run (needs to be threadsafe?)
+how is average size measured: number of words, chars, both
+what is the expected output: number(s), file
+is there a preferred language, platform, technology(s)
+who are the users (how technical are they: ok with cmd prompt or needs UI), students or teachers
+team size
+documentation requirements
+unit testing, CI
+what makes a sentence: ., ?, !; maybe , and ; - configuration
+rounding to the nearest int, or leave as n digit float
+
+	P2L1 Requirements Engineering:
+SRS: Software requirements specification
+must keep in mind hardware and context
+quality is a function of software and purpose
+ID purpose = defining requirements
+often missing: completeness and pertinence
+having stakeholder sign off on requirements puts bad pressure on stakeholder to read lengthy boring documentation 
+	what are Requirements:
+application domain: where the software operates
+	d- domain properties: things that are true of the world anyways; assumptions on the domain
+	r- requirements: things in the world we'd like to achieve; actual requirements
+machine domain: hardware, OS, libraries
+	c- computer: hardware
+	p- program: software that runs on the device
+specification: bridge between application domain & machine domain; 
+	written in terms of shared phenomena, things true in both domains
+	types of phenomena: 
+		events in the real world the machine can sense (ex, button pushed), 
+		actions in the real world the machine can cause (ex, image appears on screen)
+functional and non-functional requirements (non-functional: system quality, not function)
+user and system requirements
+elicitation problems
+traditional techniques
+other techniques
+modeling requirements
+	analyzing requirements:
+verification: correct, accurately model user needs, completeness, pertinence, consistent, unambiguous
+validation: focus on stakeholders, stakeholder interact with prototype / test driving, surveys, testing
+risk analysis: how much potential harms is there in changes in requirements model 
+requirements prioritization: mandatory, nice to have, superfluous
+Requirements engineering iterative process
+Software requirements specification (SRS) document
+
+	P2L2 OO Software Engineering And UML:
+OOP: 
+Data over function: data items are at the center of functionality
+Information hiding: public, protected, private?
+encapsulation: technique to achieve info hiding
+inheritance: extends, implements, child / parent classes
+object / class: instance variables & operators
+class is a blueprint for an object; object is an instance of a clsss
+Why OOP :
+reduce maintenances cost
+improve dev process
+enforce good design
+OOAD: Object oriented analysis & design
+ERD: Entity Relationship Diagram
+OMT: Object modeling technique (data, functions, control)
+UML: Unified Modeling Language
+	Class Diagram:
+-: private
++: public
+noun = class
+adjective = attribute
+verb = function / operation / relationships
+dependency: dashed line - "uses"
+association: solid line (decorators can indicated direction and multiplicity) - "has a"
+aggregation: solid line with diamond - "has many"
+generalization: solid line with arrow - "is a"
+component diagram: static view of components and their relationships
+deployment diagram: static view of a system
+	Behavioral Diagrams: 
+Use Case: describes outside view of the system
+Sequence diagram: interaction diagram that emphasizes the time ordering of messages
+state transition diagram: [see screenshots]
+
+	P2L3 Android:
+[stuff I already know, but good refresher]
+
+	P3L1 Software Architecture:
+Software Architecture (Perry & Wolf):
+	Elements : the what
+	Form : the how
+	Rationale: the why
+Software Architecture (Shaw & Garland):
+	level of design that involves:
+	1- description of elements from which systems are built
+	2- interactions among those elements
+	3- patterns that guide their composition
+	4- constraints on these patterns
+Software Architecture (prof):
+	set of principle design decisions about the system
+	blueprint of software system (see screenshot)
+Hadoop example: lots of circular references
+Bash example: low cohesion, high coupling
+cohesion: measure of how strongly related are the elements of a module (high cohesion is better)
+coupling: measure of how strongly related are different modules in a system (low coupling is better)
+innovate only as much as you need to
+reuse as much as you can
+
+	P3L2 A Tale Of Analysis And Design:
+[screenshots]
+
+	P3L3 Design Patterns:
+[screenshots]
+
+	P3L4 Unified Software Process:
+RUP: Rational Unified Process
+Use case model: set of use cases
+Use case diagrams can be used:
+	to prioritize requirements
+	during requirements elicitation
+	for test case design
+	to estimate effort
+	by customers to assess requirements
+	to provide common language between customers and developers
+RUP is use case driven, architecture centric, iterative / incremental
+
+	P4L1 General Concepts:
+software testing: verification & validation
+Failure: observable incorrect behavior
+Fault: incorrect code (aka bug); necessary for fault but not sufficient
+Error: cause of fault
+integration testing that tests all modules interaction at once: big bang integration testing
+===
+what is the difference between big bang integration testing and system testing?
+what is an example of nonfunctional testing?
+===
+in white box testing: missing path is specified functionality that is not yet implemented
+
+	P4L2 Black-Box Testing:
+test data selection: process of picking which inputs and which outputs to test
+exhaustive testing: testing every possible input and output
+test frame: specification of a test
+TSLgenerator: pt 20
+
+	P4L3 White-Box Testing:
+CFG: Control Flow Graph
+branch coverage is stronger and more expensive (requires more test cases) than statement coverage
+every *non-trivial* program contains dead or unreachable code
+
+	P4L4 Agile Development Methods:
+[
+interesting side note from section 9 of this lesson:
+check mark looks like a V, as in verified or veritas
+]
+
+	P4L5 Software Refactoring:
+behavior preserving: no guarantee, but testing helps
+testing only shows presence of defects, not their absence
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

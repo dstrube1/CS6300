@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.MainActivity">
+<!--
+https://www.javatpoint.com/android-startactivityforresult-example
+https://github.gatech.edu/gt-omscs-se-2021fall/6300Fall21Team020/blob/master/GroupProject/Docs/DesignDocument.md
+https://developer.android.com/training/data-storage/sqlite#java
+-->
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Job Comparison App"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Main Menu" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="enterCurrentJobDetails"
+        android:text="ENTER CURRENT JOB DETAILS" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:onClick="enterJobOfferDetails"
+        android:text="ENTER JOB OFFER DETAILS" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="ADJUST COMPARISON SETTINGS" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COMPARE JOBS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+commenting out 69-72
+before (0b2c5f8): 44/48 covered; 100.0
+after (9c2c670): still "
+
+deleted 69-72
+commenting out 60-68
+before (9c2c670): 44/48 covered; 100.0
+after (aeced69):  still ^
+
+deleted 60-68
+commenting out 41-59
+before (aeced69): 44/48 covered; 100.0
+after (a828f34):  still ^
+
+deleted 41-59
+commenting out 73-93
+before (a828f34): 44/48 covered; 100.0
+after (edf71d0):  42/48; good, so changes are getting noticed
+
+uncommented 73-83
+before (edf71d0):  42/48
+after (5881834): 44/48 covered; 100.0
+
+commented 78-83
+before (5881834): 44/48 covered; 100.0
+after(f8f5b2d): 43/48
+
+uncommented 78-83
+before (f8f5b2d): 43/48
+after (bc8edbf): 44/48 covered; 100.0
+
+commented 2,3,8
+before (bc8edbf): 44/48 covered; 100.0
+after (70996a5): still ^
+
+deleted 2,3,8; commented 10-14
+before (70996a5): 44/48 covered; 100.0
+after (af40035): still ^
+
+deleted 10-14; commented 16,18,20-23
+before (af40035): 44/48 covered; 100.0
+after (3cc501a): error, not enough tests
+
+uncommented  16,18,20-23; did renumbering etc
+before (3cc501a): error, not enough tests
+after (524aa9f): error, not enough tests; troubling; if give up, revert back to last 100%
+
+added 43 & 44
+before (524aa9f): error, not enough tests
+after (f186fc7): error, not enough tests
+
+added 45 & 46
+before (f186fc7): error, not enough tests
+after (5cfe6eb): 43 / 48
+
+trying to revet back to af40035
+before ():
+after (1a82bd4):
+^didn't work as expected; came out messy; giving up record and doing tedious manual edits
+
+...
+confirmed essential:
+Value of s param :  1 s param
+
+nonessential:
+Value of s param :  0 s param
+Filename 'quoted'
+Filename "quoted"

@@ -1,0 +1,47 @@
+git clone https://github.gatech.edu/gt-omscs-se-2021fall/6300Fall21dstrube3.git
+[download: https://drive.google.com/file/d/1g-UQC5c5q5IMjjmnTmHRHvnWdhsT6BDC/view?usp=sharing 
+extract to 6300Fall21dstrube3]
+git branch development
+git checkout development
+[implement MyString & MyStringTest]
+git status
+git add Assignment3
+git commit -a -m "Implemented MyString and MyStringTest"
+cd Assignment3
+git add -f lib/*
+git commit -a -m "Adding lib folder"
+git checkout master
+git merge development -m "Merging development into master"
+git push
+git log
+
+[if errors:]
+git checkout development
+[implement fix]
+git add .
+git commit -a -m "Trying a couple of fixes"
+git checkout master
+git merge development -m "Merging development into master"
+git push
+git log
+
+git checkout development
+[implement fix]
+git add .
+git commit -a -m "Changed interface to class"
+git checkout master
+git merge development -m "Merging development into master"
+git push
+git log
+
+git checkout development
+[implement fix]
+git add .
+git commit -a -m "Fixed typo in NINE"
+git checkout master
+git merge development -m "Merging development into master"
+git push
+git log
+
+
+

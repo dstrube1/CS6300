@@ -1,0 +1,107 @@
+# FOption
+  Presence of f option:
+      None.					[single]
+      One.					[single]
+      Many.					[single]
+
+# IOption
+  Presence of i option:
+      None.					[single]
+      One.					[single]
+      Many.					[single]
+
+# SOption
+  Presence of s option:
+      None.					[single]
+      One.					[property soption]
+      Many.					[single]
+
+# SParameter
+    0.						[if soption][property zeros]
+    1.						[if soption][property ones]
+    AnythingElse.			[error][if soption && !zeros && ! ones]
+
+# EOption
+  Presence of e option:
+      None.					[single]
+      One.					[property eoption]
+      Many.					[single]
+
+# EParameter
+  Length of the e param:
+      Empty.				[error][if eoption]
+      One.					[if eoption]
+      Many.					[if eoption][property eparamlengthgt1]
+      Longer than the file.	[single][if eoption]
+  Presence of blanks in e param:
+      None.					[if eoption]
+      One.					[if eoption]
+      Many.					[if eparamlengthgt1]
+  Presence of quotes in e param:
+      None.					[single][if eoption]
+      One.					[single][if eoption]
+      Many.					[single][if eparamlengthgt1]
+
+# XOption
+  Presence of x option:
+      None.					[single]
+      One.					[single][property xoption]
+      Many.					[single]
+
+# XParameter
+  Length of the x param:
+      Empty.				[error][if xoption]
+      One.					[single][if xoption]
+      Many.					[single][if xoption][property xparamlengthgt1]
+      Longer than the file.	[single][if xoption]
+  Presence of blanks in x param:
+      None.					[single][if xoption]
+      One.					[single][if xoption]
+      Many.					[single][if xparamlengthgt1]
+  Presence of quotes in x param:
+      None.					[single][if xoption]
+      One.					[single][if xoption]
+      Many.					[single][if xparamlengthgt1]
+
+# ROption
+  Presence of r option:
+      None.					[single]
+      One.					[single]
+      Many.					[single]
+
+# NOption
+  Presence of n option:
+      None.					[single]
+      One.					[single][property noption]
+      Many.					[single]
+
+# NParameter
+  Value:
+  	<0.					[error][if noption]
+    0.					[single][if noption]
+    1.					[single][if noption]
+  	>1.					[single][if noption]
+
+# File
+  Size:
+      Empty.			[single][property emptyfile] 
+      Not empty.
+  Number of occurrences of the e parameter in the file:
+      None.				[single][if !emptyfile] [property noOccurences]
+      One.				[single][if !emptyfile]
+      Many.				[single][if !emptyfile]
+  Number of occurrences of the pattern in one line:
+      One.				[single][if !noOccurences && !emptyfile]
+      Many.				[single][if !noOccurences && !emptyfile]
+
+# Filename
+  Presence of a file corresponding to the name:
+      Not present.		[error]
+      Present.
+  Presence of enclosing quotes:
+      Not enclosed.		[single]
+      Enclosed.			[single]
+      Incorrect.		[error]
+
+#    special characters.       [if !zerovalue]
+#    spaces.                   [if !zerovalue]

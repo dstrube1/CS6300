@@ -1,0 +1,305 @@
+
+Test Case 1  		<single>
+   Presence of f option :  None
+
+
+Test Case 2  		<single>
+   Presence of f option :  One
+
+
+Test Case 3  		<single>
+   Presence of f option :  Many
+
+
+Test Case 4  		<single>
+   Presence of i option :  None
+
+
+Test Case 5  		<single>
+   Presence of i option :  One
+
+
+Test Case 6  		<single>
+   Presence of i option :  Many
+
+
+Test Case 7  		<single>
+   Presence of s option :  None
+
+
+Test Case 8  		<single>
+   Presence of s option :  Many
+
+
+Test Case 9  		<error>
+   Presence of s option :  AnythingElse
+
+
+Test Case 10 		<single>
+   Presence of e option :  None
+
+
+Test Case 11 		<single>
+   Presence of e option :  Many
+
+
+Test Case 12 		<error>
+   Length of the e param :  Empty
+
+
+Test Case 13 		<single>
+   Length of the e param :  Longer than the file
+
+
+Test Case 14 		<single>
+   Presence of quotes in e param :  None
+
+
+Test Case 15 		<single>
+   Presence of quotes in e param :  One
+
+
+Test Case 16 		<single>
+   Presence of quotes in e param :  Many
+
+
+Test Case 17 		<single>
+   Presence of x option :  None
+
+
+Test Case 18 		<single>
+   Presence of x option :  One
+
+
+Test Case 19 		<single>
+   Presence of x option :  Many
+
+
+Test Case 20 		<error>
+   Length of the x param :  Empty
+
+
+Test Case 21 		<single>
+   Length of the x param :  One
+
+
+Test Case 22 		<single>
+   Length of the x param :  Many
+
+
+Test Case 23 		<single>
+   Length of the x param :  Longer than the file
+
+
+Test Case 24 		<single>
+   Presence of blanks in x param :  None
+
+
+Test Case 25 		<single>
+   Presence of blanks in x param :  One
+
+
+Test Case 26 		<single>
+   Presence of blanks in x param :  Many
+
+
+Test Case 27 		<single>
+   Presence of quotes in x param :  None
+
+
+Test Case 28 		<single>
+   Presence of quotes in x param :  One
+
+
+Test Case 29 		<single>
+   Presence of quotes in x param :  Many
+
+
+Test Case 30 		<single>
+   Presence of r option :  None
+
+
+Test Case 31 		<single>
+   Presence of r option :  One
+
+
+Test Case 32 		<single>
+   Presence of r option :  Many
+
+
+Test Case 33 		<single>
+   Presence of n option :  None
+
+
+Test Case 34 		<single>
+   Presence of n option :  One
+
+
+Test Case 35 		<single>
+   Presence of n option :  Many
+
+
+Test Case 36 		<error>
+   Value :  <0
+
+
+Test Case 37 		<single>
+   Value :  0
+
+
+Test Case 38 		<single>
+   Value :  1
+
+
+Test Case 39 		<single>
+   Value :  >1
+
+
+Test Case 40 		<single>
+   Size :  Empty
+
+
+Test Case 41 		<single>
+   Number of occurrences of the e parameter in the file :  None
+
+
+Test Case 42 		<single>
+   Number of occurrences of the e parameter in the file :  One
+
+
+Test Case 43 		<single>
+   Number of occurrences of the e parameter in the file :  Many
+
+
+Test Case 44 		<single>
+   Number of occurrences of the pattern in one line :  One
+
+
+Test Case 45 		<single>
+   Number of occurrences of the pattern in one line :  Many
+
+
+Test Case 46 		<error>
+   Presence of a file corresponding to the name :  Not present
+
+
+Test Case 47 		<single>
+   Presence of enclosing quotes :  Not enclosed
+
+
+Test Case 48 		<single>
+   Presence of enclosing quotes :  Enclosed
+
+
+Test Case 49 		<error>
+   Presence of enclosing quotes :  Incorrect
+
+
+Test Case 50 		(Key = 0.0.2.2.2.1.0.0.0.0.0.0.0.0.2.0.0.2.0.)
+   Presence of f option                                 :  <n/a>
+   Presence of i option                                 :  <n/a>
+   Presence of s option                                 :  One
+   Presence of e option                                 :  One
+   Length of the e param                                :  One
+   Presence of blanks in e param                        :  None
+   Presence of quotes in e param                        :  <n/a>
+   Presence of x option                                 :  <n/a>
+   Length of the x param                                :  <n/a>
+   Presence of blanks in x param                        :  <n/a>
+   Presence of quotes in x param                        :  <n/a>
+   Presence of r option                                 :  <n/a>
+   Presence of n option                                 :  <n/a>
+   Value                                                :  <n/a>
+   Size                                                 :  Not empty
+   Number of occurrences of the e parameter in the file :  <n/a>
+   Number of occurrences of the pattern in one line     :  <n/a>
+   Presence of a file corresponding to the name         :  Present
+   Presence of enclosing quotes                         :  <n/a>
+
+
+Test Case 51 		(Key = 0.0.2.2.2.2.0.0.0.0.0.0.0.0.2.0.0.2.0.)
+   Presence of f option                                 :  <n/a>
+   Presence of i option                                 :  <n/a>
+   Presence of s option                                 :  One
+   Presence of e option                                 :  One
+   Length of the e param                                :  One
+   Presence of blanks in e param                        :  One
+   Presence of quotes in e param                        :  <n/a>
+   Presence of x option                                 :  <n/a>
+   Length of the x param                                :  <n/a>
+   Presence of blanks in x param                        :  <n/a>
+   Presence of quotes in x param                        :  <n/a>
+   Presence of r option                                 :  <n/a>
+   Presence of n option                                 :  <n/a>
+   Value                                                :  <n/a>
+   Size                                                 :  Not empty
+   Number of occurrences of the e parameter in the file :  <n/a>
+   Number of occurrences of the pattern in one line     :  <n/a>
+   Presence of a file corresponding to the name         :  Present
+   Presence of enclosing quotes                         :  <n/a>
+
+
+Test Case 52 		(Key = 0.0.2.2.3.1.0.0.0.0.0.0.0.0.2.0.0.2.0.)
+   Presence of f option                                 :  <n/a>
+   Presence of i option                                 :  <n/a>
+   Presence of s option                                 :  One
+   Presence of e option                                 :  One
+   Length of the e param                                :  Many
+   Presence of blanks in e param                        :  None
+   Presence of quotes in e param                        :  <n/a>
+   Presence of x option                                 :  <n/a>
+   Length of the x param                                :  <n/a>
+   Presence of blanks in x param                        :  <n/a>
+   Presence of quotes in x param                        :  <n/a>
+   Presence of r option                                 :  <n/a>
+   Presence of n option                                 :  <n/a>
+   Value                                                :  <n/a>
+   Size                                                 :  Not empty
+   Number of occurrences of the e parameter in the file :  <n/a>
+   Number of occurrences of the pattern in one line     :  <n/a>
+   Presence of a file corresponding to the name         :  Present
+   Presence of enclosing quotes                         :  <n/a>
+
+
+Test Case 53 		(Key = 0.0.2.2.3.2.0.0.0.0.0.0.0.0.2.0.0.2.0.)
+   Presence of f option                                 :  <n/a>
+   Presence of i option                                 :  <n/a>
+   Presence of s option                                 :  One
+   Presence of e option                                 :  One
+   Length of the e param                                :  Many
+   Presence of blanks in e param                        :  One
+   Presence of quotes in e param                        :  <n/a>
+   Presence of x option                                 :  <n/a>
+   Length of the x param                                :  <n/a>
+   Presence of blanks in x param                        :  <n/a>
+   Presence of quotes in x param                        :  <n/a>
+   Presence of r option                                 :  <n/a>
+   Presence of n option                                 :  <n/a>
+   Value                                                :  <n/a>
+   Size                                                 :  Not empty
+   Number of occurrences of the e parameter in the file :  <n/a>
+   Number of occurrences of the pattern in one line     :  <n/a>
+   Presence of a file corresponding to the name         :  Present
+   Presence of enclosing quotes                         :  <n/a>
+
+
+Test Case 54 		(Key = 0.0.2.2.3.3.0.0.0.0.0.0.0.0.2.0.0.2.0.)
+   Presence of f option                                 :  <n/a>
+   Presence of i option                                 :  <n/a>
+   Presence of s option                                 :  One
+   Presence of e option                                 :  One
+   Length of the e param                                :  Many
+   Presence of blanks in e param                        :  Many
+   Presence of quotes in e param                        :  <n/a>
+   Presence of x option                                 :  <n/a>
+   Length of the x param                                :  <n/a>
+   Presence of blanks in x param                        :  <n/a>
+   Presence of quotes in x param                        :  <n/a>
+   Presence of r option                                 :  <n/a>
+   Presence of n option                                 :  <n/a>
+   Value                                                :  <n/a>
+   Size                                                 :  Not empty
+   Number of occurrences of the e parameter in the file :  <n/a>
+   Number of occurrences of the pattern in one line     :  <n/a>
+   Presence of a file corresponding to the name         :  Present
+   Presence of enclosing quotes                         :  <n/a>

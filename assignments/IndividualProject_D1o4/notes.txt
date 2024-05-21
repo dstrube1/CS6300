@@ -1,0 +1,151 @@
+https://docs.oracle.com/javase/7/docs/api/java/nio/file/Files.html
+https://docs.oracle.com/javase/8/docs/api/java/lang/String.html
+
+Clarification on -n <integer> padding
+https://edstem.org/us/courses/8344/discussion/792892
+
+txted example 9
+https://edstem.org/us/courses/8344/discussion/792671
+
+[MAC Quick Fix] Cannot Be Opened Because the Developer Cannot be Verified
+https://edstem.org/us/courses/8344/discussion/793481
+
+Errors/usage messages to stderr
+https://edstem.org/us/courses/8344/discussion/793601
+
+Options (or FILE) with space
+https://edstem.org/us/courses/8344/discussion/795395
+
+Is that allowable to use a dash in option parameters?
+https://edstem.org/us/courses/8344/discussion/794652
+
+Program Argument Syntax Conventions
+https://edstem.org/us/courses/8344/discussion/795610
+
+Test case where tsl shows n/a
+https://edstem.org/us/courses/8344/discussion/795990
+
+===
+
+1- make sure file exists - if not, error
+
+2- make sure file is not empty- if it is empty, just return
+
+options processed in this order:
+-f [write to file]
+-i [ignore case]
+-s 0 <- [skip odd or even] 0 or 1
+-e exclude
+-x suffix 
+-r [reverse]
+-n 1 <- [number lines, 0 padded] >= 0
+
+if -i, then must have -e
+
+valids:
+-f
+-e x
+-i 
+-s 0
+-x !
+-r 
+-n 1
+
+?:
+-f
+-e x
+-i 
+-s 2
+-x !
+-r 
+-n 0
+
+invalids:
+-f unexpected
+-e x
+-i 
+-s 0
+-x !
+-r 
+-n 1
+
+-f
+-e x
+-i unexpected
+-s 0
+-x !
+-r 
+-n 1
+
+-f
+-e x
+-i 
+-s 0
+-x !
+-r unexpected
+-n 1
+
+-f
+-e [nothing here]
+-i 
+-s 0
+-x !
+-r 
+-n 1
+
+-f
+-e x
+-i 
+-s [nothing here]
+-x !
+-r 
+-n 1
+
+-f
+-e x
+-i 
+-s 0
+-x [nothing here]
+-r 
+-n 1
+
+-f
+-e x
+-i 
+-s 0
+-x !
+-r 
+-n [nothing here]
+
+-f
+-e x
+-i 
+-s -0
+-x !
+-r 
+-n 1
+
+-f
+-e x
+-i 
+-s -1
+-x !
+-r 
+-n 1
+
+-f
+-e x
+-i 
+-s 0
+-x !
+-r 
+-n -1
+
+-f
+-e x
+-i 
+-s 0
+-x !
+-r 
+-n -0
+

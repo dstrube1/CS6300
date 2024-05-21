@@ -1,0 +1,98 @@
+[to reset, run from both terminals:]
+git checkout master
+git branch -D development temp
+git push origin :development
+git push origin :temp
+git tag -d V1
+git push origin :V1
+git reset --hard 8a255ef430686bab1d2eb1330969c3bd174783d7
+git push --force
+
+[Part 1]
+[in terminal for User 1, jump to step 3:]
+
+[jump to step 7:]
+mkdir Assignment2
+cd Assignment2
+nano myinfo.txt
+[David Strube]
+git add myinfo.txt
+git commit -a -m "Added myinfo file"
+git branch development
+git checkout development
+nano dev1.txt
+[Dev 1 file]
+git add dev1.txt
+git commit -a -m "Added dev1 file"
+git checkout master
+nano myinfo.txt
+[dstrube3@gatech.edu]
+git add myinfo.txt
+git commit -a -m "Edited myinfo file"
+git merge development -m "Merge #1"
+git push --all
+[verify Network graph: https://github.gatech.edu/gt-omscs-se-2021fall/6300Fall21dstrube3/network]
+[END Part 1]
+
+[Part 2]
+[in terminal for User 2]
+git clone https://github.gatech.edu/gt-omscs-se-2021fall/6300Fall21dstrube3.git
+[jump to step 5]
+cd Assignment2
+git checkout development
+nano dev2.txt
+[Dev 2 file]
+git add dev2.txt
+git commit -a -m "Added dev2 file"
+git branch temp
+git checkout temp
+nano mytemp.txt
+[Mytemp file]
+git add mytemp.txt
+git commit -a -m "Added mytemp file"
+git checkout development
+nano dev3.txt
+[Dev 3 file]
+git add dev3.txt
+git commit -a -m "Added dev3 file"
+git merge temp -m "Merge #2"
+git checkout master
+git merge development -m "Merge #3"
+nano myinfo.txt
+[Fall 2021]
+git add myinfo.txt
+git commit -a -m "Edited myinfo file again"
+git push --all
+[END Part 2]
+
+[Part 3]
+[go back to User 1 Terminal]
+git status
+[verify in master]
+nano myinfo.txt
+[6300Fall21dstrube3]
+git add myinfo.txt
+git commit -a -m "Edited myinfo file for the third time"
+git pull
+[handle conflcits]
+git add myinfo.txt
+git commit -a -m "Final merge with conflicts fixed"
+git push
+git tag V1
+git push --tags
+[END Part 3]
+
+[Submission]
+[verify Network graph: https://github.gatech.edu/gt-omscs-se-2021fall/6300Fall21dstrube3/network]
+[verify tags: https://github.gatech.edu/gt-omscs-se-2021fall/6300Fall21dstrube3/tags]
+git log
+[get most recent commit id, put it in submission text, submit]
+
+
+
+
+
+
+
+
+
